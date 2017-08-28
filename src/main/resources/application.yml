@@ -2,4 +2,4 @@ server:
   port: 8000
   contextPath: /dyomedes
 test: 
-  message: Hello, little %s!
+  message: Hello, %s!
