@@ -7,7 +7,7 @@ import org.eightengine.domain.Greeting;
 @Mapper
 public interface DBMapper {
 
-	@Select("SELECT id, name, state, country FROM city WHERE state = #{state}")
-    Greeting getGreeting(String id);
+	@Select("SELECT id, content FROM greetings WHERE id = #{id}")
+    Greeting getGreeting(Long id);
 	
 }

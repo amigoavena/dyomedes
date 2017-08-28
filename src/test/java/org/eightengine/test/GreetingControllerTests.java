@@ -48,5 +48,12 @@ public class GreetingControllerTests {
                 .andDo(print()).andExpect(status().isOk())
                 .andExpect(jsonPath("$.content").value("Hello, little Spring Community!"));
     }
+    
+    @Test
+    public void paramGreetingShouldReturnMessageFromDB() throws Exception {
+        this.mockMvc.perform(get("/test").param("id", "2"))
+                .andDo(print()).andExpect(status().isOk())
+                .andExpect(jsonPath("$.content").value("santacachuchona"));
+    }
 
 }

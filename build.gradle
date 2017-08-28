@@ -40,9 +40,4 @@ flyway {
     url = 'jdbc:h2:~/test;DB_CLOSE_ON_EXIT=FALSE'
     user = 'myUsr'
     password = 'mySecretPwd'
-    schemas = ['schema1', 'schema2', 'schema3']
-    placeholders = [
-        'keyABC': 'valueXYZ',
-        'otherplaceholder': 'value123'
-    ]
 }
