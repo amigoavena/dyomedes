@@ -33,7 +33,9 @@ dependencies {
             'org.elasticsearch.client:transport:5.5.1',
 			'org.apache.commons:commons-lang3:3.0',
             'org.flywaydb:flyway-core:4.2.0',
-            'com.h2database:h2'
+            'com.h2database:h2',
+			'org.apache.logging.log4j:log4j-core:2.9.1'
+            
 
     testCompile 'org.springframework.boot:spring-boot-starter-test',
                 'com.jayway.jsonpath:json-path'

@@ -54,12 +54,13 @@ public class GreetingController {
 		return results;
 	}
     
-	@RequestMapping(value = "/events",method=RequestMethod.POST)
-	public Map<String,Object> postObject(@RequestBody Map<String,Object> id) {
+	@RequestMapping(value = "/events/{objId}",method=RequestMethod.POST)
+	public Map<String,Object> postObject(@RequestBody Map<String,Object> id, @PathVariable String objId) {
 		log.debug(ReflectionToStringBuilder.toString(id));
-		String resultId = service.indexDocument(id);
+		service.updateDocument(id, objId);
 		Map<String,Object> results = new HashMap<String,Object>();
-		results.put("id", resultId);
+		results.put("id", objId);
+		results.put("operation", "update");
 		return results;
 	}
 	
